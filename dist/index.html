@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App(JS)</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+  <link rel="stylesheet" href="/src.a2b27638.css"></head>
+
+  <body>
+    <div class="text_area">
+      <input id="add-text" placeholder="TODO入力">
+      <button id="add-button">追加</button>
+    </div>
+    <div class="incomplete-box box-style">
+      <h3 class="title">未完了のTODO</h3>
+      <ul id="incomplete-list" class="list-style">
+        <li>
+          <span class="list-row">
+            TODO
+            <button>完了</button>
+            <button>削除</button>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="finish-todo box-style">
+      <h3 class="title">完了したTODO</h3>
+      <ul class="list-style">
+        <li>
+          TODOでした
+          <button>戻す</button>
+        </li>
+      </ul>
+    </div>
+
+    <script src="/src.a2b27638.js"></script>
+    <style>input {
+        padding: 10px 10px;
+        font-size: 15px;
+        border-radius: 6px;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px;
+        background: #333;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+      }
+      .box-style {
+        margin: 15px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+      }
+      .list-style li {
+        margin: 0 auto 10px;
+        list-style: none;
+        padding: 5px 15px;
+        border: 2px solid #333;
+        border-radius: 6px;
+      }</style>
+  </body>
+</html>
