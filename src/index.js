@@ -11,6 +11,7 @@ const onClickAdd = () => {
   //spanタグ生成
   const span = document.createElement("span");
   span.innerText = inputText;
+  span.classList.add("list-row");
 
   //button(完了)タグ生成
   const completeButton = document.createElement("button");
@@ -18,7 +19,6 @@ const onClickAdd = () => {
   completeButton.addEventListener("click", () => {
     alert("完了");
   });
-  //console.log(completeButton);
 
   //button(削除)タグ生成
   const deleteButton = document.createElement("button");
@@ -32,7 +32,7 @@ const onClickAdd = () => {
   //console.log(deleteButton);
 
   // liタグの子要素に各要素を設定
-  span.appendChild(li);
+  li.appendChild(span);
   span.appendChild(completeButton);
   span.appendChild(deleteButton);
 
