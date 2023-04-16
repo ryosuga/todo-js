@@ -168,60 +168,7 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/index.js":[function(require,module,exports) {
-"use strict";
-
-require("./styles.css");
-var onClickAdd = function onClickAdd() {
-  //テキストボックスの値を取得し、初期化する。
-  var inputText = document.getElementById("add-text").value;
-  document.getElementById("add-text").value = "";
-
-  //li生成
-  var li = document.createElement("li");
-
-  //spanタグ生成
-  var span = document.createElement("span");
-  span.innerText = inputText;
-  span.classList.add("list-row");
-
-  //button(完了)タグ生成
-  var completeButton = document.createElement("button");
-  completeButton.innerText = "完了";
-  completeButton.addEventListener("click", function () {
-    alert("完了");
-  });
-
-  //button(削除)タグ生成
-  var deleteButton = document.createElement("button");
-  deleteButton.innerText = "削除";
-  deleteButton.addEventListener("click", function () {
-    //押された削除ボタンの親タグ(li)を未完了リストから削除
-    var deleteTarget = deleteButton.parentNode;
-    document.getElementById("incomplete-list").removeChild("deleteTarget");
-    //console.log(deleteTarget);
-  });
-  //console.log(deleteButton);
-
-  // liタグの子要素に各要素を設定
-  li.appendChild(span);
-  span.appendChild(completeButton);
-  span.appendChild(deleteButton);
-
-  //未完了リストに追加
-  document.getElementById("incomplete-list").appendChild(li);
-  //console.log(span);
-  //alert(inputText);
-};
-
-document.getElementById("add-button").addEventListener("click", function () {
-  return onClickAdd();
-});
-},{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -390,5 +337,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
-//# sourceMappingURL=/src.a2b27638.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
